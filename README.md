@@ -3,7 +3,7 @@
 ## Usage
 
 - Visit https://hey-check-this-out.vercel.app/ using a URL parameter like the example above to mirror an external website within an iframe. sitetom=https://example.com
--[https://hey-check-this-out.vercel.app/](https://hey-check-this-out.vercel.app/?sitetom=https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif)
+- [https://hey-check-this-out.vercel.app/](https://hey-check-this-out.vercel.app/?sitetom=https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif)
 - Click the "Mirror Website" button (if implemented) to initiate the mirroring process.
 
 ## Limitations
