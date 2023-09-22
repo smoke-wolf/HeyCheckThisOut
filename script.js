@@ -6,8 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const websiteURL = urlParams.get("sitetom");
 
     if (websiteURL) {
-        // Display the specified website in an iframe
-        contentElement.innerHTML = `<iframe src="${websiteURL}" width="100%" height="600"></iframe>`;
+        // Attempt to load the specified website in an iframe
+        const iframe = document.createElement("iframe");
+        iframe.src = websiteURL;
+        iframe.width = "100%";
+        iframe.height = 600;
+        iframe.onload = function () {
+            // If the iframe has loaded successfully, append it to the content element
+            contentElement.innerHTML = "";
+            contentElement.appendChild(iframe);
+        };
+        iframe.onerror = function () {
+            // If there was an error loading the iframe (e.g., due to security restrictions),
+            // inform the user with a message
+            contentElement.innerHTML = "Unable to load the website. Please check the URL or try another website.";
+        };
     } else {
         contentElement.innerHTML = "No website specified.";
     }
